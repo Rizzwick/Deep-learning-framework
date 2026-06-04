@@ -174,16 +174,3 @@ Each differentiable op (e.g. `matmul`, `add`, `relu`) builds an output `Tensor` 
 Inference-time graph building can be disabled by setting `Tensor::grad_enabled = false`, which both saves memory and avoids the cost of recording the graph (the MNIST demo uses this during evaluation).
 
 ---
-
-## Notes & Limitations
-
-- CPU only; no GPU/CUDA backend.
-- Single precision (`float`) throughout (`typedef float datatype` in `new_matrix.hpp`).
-- Designed for learning — small models train comfortably; large-scale workloads are out of scope.
-- The MNIST CSV loader expects the standard `label, pixel0, ..., pixel783` format with pixel values in `[0, 255]`.
-
----
-
-## License
-
-No license specified yet — add one before publishing or reusing this code.
